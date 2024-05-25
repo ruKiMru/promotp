@@ -2,10 +2,11 @@
 global $conn;
 include 'database.php';
 // SQL запрос для получения данных о клиентах, задачах и статусах
-$sql = "SELECT c.id_client, c.first_name, c.middle_name, c.last_name, i.name AS task_name, s.status_name
+$sql = "SELECT c.id_client, c.first_name, c.middle_name, c.last_name, i.name AS task_name, s.status_name, c.username
         FROM clients c
         LEFT JOIN issues i ON c.id_client = i.id_client
-        LEFT JOIN status s ON i.id_status = s.id_status";
+        LEFT JOIN status s ON i.id_status = s.id_status
+        WHERE c.deleted = 0";
 $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
@@ -72,6 +73,10 @@ $result = $conn->query($sql);
                     <label for="c_inn">ИНН:</label>
                     <input type="text" id="c_inn">
                 </div>
+                <div class="input-group">
+                    <label for="c_tg">Ник в телеграм:</label>
+                    <input type="text" id="c_tg">
+                </div>
                 <button class="save-button" onclick="addClient()">Добавить</button>
             </div>
         </div>
@@ -86,7 +91,7 @@ $result = $conn->query($sql);
             <div class="content">
                 <img class="logo" src="IMG/image-wind-user.svg" alt="Logo">
                 <div class="chat-info">
-                    <img class="chat-icon" src="IMG/image-chat.svg" alt="Chat Icon">
+                    <img class="chat-icon" onclick="window.location.href='/chats.php'" src="IMG/image-chat.svg" alt="Chat Icon">
                     <div class="header">Открыть чат</div>
                 </div>
             </div>
@@ -115,6 +120,11 @@ $result = $conn->query($sql);
                     <label for="inn">ИНН:</label>
                     <input type="text" id="inn">
                 </div>
+
+                <div class="input-group">
+                    <label for="tg">Ник в телеграм:</label>
+                    <input type="text" id="tg">
+                </div>
                 <button class="save-button" id="saveButton">Сохранить</button>
             </div>
         </div>
@@ -141,7 +151,7 @@ $result = $conn->query($sql);
             </a>
         </div>
         <div class="nav-item">
-            <a href="product/products.php" class="rectangle-9 chat" style="text-decoration: none;">
+            <a href="product/products.php" class="rectangle-9 chat" style="text-decoration: none;padding:0 10px; 0 10px;">
                 <img src="IMG/image30.png" alt="Чаты" width="28" height="24"/>
                 <span class="nav-text">Продукты</span>
             </a>
@@ -181,13 +191,13 @@ $result = $conn->query($sql);
         // Вывод данных из базы данных
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo "<tr>";
+                echo "<tr class='task-list-row'>";
                 // Заменяем тег <a> на <span> или <div>
-                echo "<td> <span style='cursor: pointer;' onclick='openModal(" . $row['id_client'] . ")'>" . $row["first_name"] . " " . $row["middle_name"] . " " . $row["last_name"] . "</span></td>";
-                echo "<td>" . $row["task_name"] . "</td>";
-                echo "<td>" . $row["status_name"] . "</td>";
-                echo "<td><img src='IMG/chat.svg' alt='chat' /> Открыть чат</td>";
-                echo "<td><img src='IMG/delete.svg' alt='delete' style='cursor: pointer;' onclick='deleteClient(" . $row['id_client'] . ")'></td>";
+                echo "<td onclick=(parentNode.firstElementChild.firstElementChild.click())> <span style='cursor: pointer;' onclick='openModal(" . $row['id_client'] . ")'>" . $row["first_name"] . " " . $row["middle_name"] . " " . $row["last_name"] . "</span></td>";
+                echo "<td onclick=(parentNode.firstElementChild.firstElementChild.click())>" . $row["task_name"] . "</td>";
+                echo "<td onclick=(parentNode.firstElementChild.firstElementChild.click())>" . $row["status_name"] . "</td>";
+                echo "<td onclick='(window.location.href = \"/chats.php\")'\"><img src='IMG/chat.svg' alt='chat' /> Открыть чат</td>";
+                echo "<td><img src='IMG/delete.svg' alt='delete' style='cursor: pointer;width:20px;' onclick='deleteClient(" . $row['id_client'] . ")'></td>";
                 echo "</tr>";
             }
         } else {
@@ -240,6 +250,7 @@ $result = $conn->query($sql);
         var contact_phone = document.getElementById('contact_phone').value;
         var email = document.getElementById('c_email').value;
         var inn = document.getElementById('c_inn').value;
+        var tg = document.getElementById('c_tg').value;
 
         // Проверяем, все ли поля заполнены
         if (first_name === "" || middle_name === "" || last_name === "" || company_name === "" || contact_phone === "" || email === "" || inn === "") {
@@ -267,7 +278,7 @@ $result = $conn->query($sql);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xmlhttp.send("first_name=" + first_name + "&middle_name=" + middle_name + "&last_name=" + last_name +
             "&company_name=" + company_name + "&contact_phone=" + contact_phone +
-            "&c_email=" + email + "&c_inn=" + inn);
+            "&c_email=" + email + "&c_inn=" + inn + "&tg=" + tg);
 
     }
 
@@ -287,6 +298,7 @@ $result = $conn->query($sql);
                 document.getElementById('phone').value = clientData.contact_phone;
                 document.getElementById('email').value = clientData.email;
                 document.getElementById('inn').value = clientData.inn;
+                document.getElementById('tg').value = clientData.username;
 
                 // Открываем модальное окно
                 document.getElementById('myModal').style.display = 'block';
@@ -308,6 +320,7 @@ $result = $conn->query($sql);
         var phone = document.getElementById('phone').value;
         var email = document.getElementById('email').value;
         var inn = document.getElementById('inn').value;
+        var tg = document.getElementById('tg').value;
 
         // Отправка AJAX-запроса для обновления данных клиента
         var xmlhttp = new XMLHttpRequest();
@@ -319,7 +332,7 @@ $result = $conn->query($sql);
         };
         xmlhttp.open("POST", "updateClientData.php", true);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xmlhttp.send("company=" + company + "&contact=" + contact + "&phone=" + phone + "&email=" + email + "&inn=" + inn);
+        xmlhttp.send("company=" + company + "&contact=" + contact + "&phone=" + phone + "&email=" + email + "&inn=" + inn + "&tg=" + tg);
         closeAddClientModal();
     });
 </script>

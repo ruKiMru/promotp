@@ -5,7 +5,7 @@ include 'database.php';
 $clientId = $_POST['clientId'];
 
 // Подготавливаем SQL-запрос для удаления клиента
-$sql = "DELETE FROM clients WHERE id_client = $clientId";
+$sql = "UPDATE clients SET deleted=1 WHERE id_client = $clientId";
 
 if ($conn->query($sql) === TRUE) {
     echo "Клиент успешно удален!";

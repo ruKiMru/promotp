@@ -307,6 +307,12 @@ header {
     border-color: #5FC3D0;
     outline: none;
 }
+.task-list-row:hover{
+    background: #E6E6E6;
+}
+.task-list-row{
+    cursor: pointer;
+}
 
 
 

@@ -249,11 +249,11 @@ body {
 .dropdown-content {
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 150px;
+    min-width: 140px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
-    left: 185px;
-    top: 232px; /* Изменено для лучшей видимости */
+    left: 195px;
+    top: 242px; /* Изменено для лучшей видимости */
 }
 
 .dropdown-content select {
@@ -262,7 +262,15 @@ body {
     border: none;
     outline: none;
     background-color: #fff;
-    color: #333;  
+    color: #333;
+}
+input[type=date], select{
+    border: none;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 10px;
+    margin:-10px;
 }
 
 .EditorMarks:hover {

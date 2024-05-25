@@ -32,6 +32,12 @@ include 'database.php';
                     <span class="nav-text">Чаты</span>
               </a>
             </div>
+            <div class="nav-item">
+                <a href="product/products.php" class="rectangle-9 chat" style="text-decoration: none;padding:0 10px; 0 10px;">
+                    <img src="IMG/image30.png" alt="Чаты" width="28" height="24" />
+                    <span class="nav-text">Продукты</span>
+                </a>
+            </div>
         </div>
         <div class="login-avatar-container">
             <div class="login-text">Логин</div>

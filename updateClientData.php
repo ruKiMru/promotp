@@ -9,13 +9,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST['phone'];
     $email = $_POST['email'];
     $inn = $_POST['inn'];
+    $tg = $_POST['tg'];
 
     // Подготовленный запрос для обновления данных клиента
     $sql = "UPDATE clients SET 
                 company_name = '$company', 
                 contact_phone = '$phone', 
                 email = '$email', 
-                inn = '$inn' 
+                inn = '$inn', 
+                username = '$tg' 
             WHERE CONCAT(first_name, ' ', middle_name, ' ', last_name) = '$contact'";
 
     // Выполнение запроса к базе данных

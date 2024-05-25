@@ -174,7 +174,7 @@ $result = $conn->query($sqlGetModels);
             </a>
         </div>
         <div class="nav-item active">
-            <div class="rectangle-9" style="text-decoration: none;">
+            <div class="rectangle-9" style="text-decoration: none;padding:0 10px; 0 10px;">
                 <img src="../IMG/image30-active.svg" alt="Продукты" width="28" height="24"/>
                 <span class="nav-text active">Продукты</span>
             </div>
@@ -284,11 +284,12 @@ $result = $conn->query($sqlGetModels);
                     }
                 }
 
-                echo "<tr>";
+                echo "<tr class='task-list-row'>";
                 echo "<td onclick='openEditModal(" . $row['model_id'] . ", \"" . htmlspecialchars($row['model_name'], ENT_QUOTES) . "\", [" . implode(',', $equipmentIds) . "], [" . implode(',', $configurationIds) . "])'>" . $row['model_name'] . "</td>";
                 echo "<td onclick='openEditModal(" . $row['model_id'] . ", \"" . htmlspecialchars($row['model_name'], ENT_QUOTES) . "\", [" . implode(',', $equipmentIds) . "], [" . implode(',', $configurationIds) . "])'>" . $row['equipment_name'] . "</td>";
                 echo "<td onclick='openEditModal(" . $row['model_id'] . ", \"" . htmlspecialchars($row['model_name'], ENT_QUOTES) . "\", [" . implode(',', $equipmentIds) . "], [" . implode(',', $configurationIds) . "])'>" . $row['configuration_name'] . "</td>";
-                echo "<td><button class='delete-button' onclick='deleteRecord(" . $row['model_id'] . ")'>Удалить</button></td>";
+                echo "<td><img src='../IMG/delete.svg' alt='delete' style='cursor: pointer;width:20px;' onclick='deleteRecord(" . $row['model_id'] . ")'></td>";
+
                 echo "</tr>";
             }
         } else {

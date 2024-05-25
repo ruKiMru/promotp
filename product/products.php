@@ -228,7 +228,7 @@ $result = $conn->query($sqlGetProducts);
             </a>
         </div>
         <div class="nav-item active">
-            <div class="rectangle-9" style="text-decoration: none;">
+            <div class="rectangle-9" style="text-decoration: none;padding:0 10px; 0 10px;">
                 <img src="../IMG/image30-active.svg" alt="Продукты" width="28" height="24"/>
                 <span class="nav-text active">Продукты</span>
             </div>
@@ -313,7 +313,7 @@ $result = $conn->query($sqlGetProducts);
         <?php
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo "<tr>";
+                echo "<tr class='task-list-row'>";
                 echo "<td onclick='openEditModal(" . json_encode($row) . ")'>" . $row['model_name'] . "</td>";
                 echo "<td onclick='openEditModal(" . json_encode($row) . ")'>" . $row['series'] . "</td>";
                 echo "<td onclick='openEditModal(" . json_encode($row) . ")'>" . $row['ip'] . "</td>";
@@ -324,7 +324,7 @@ $result = $conn->query($sqlGetProducts);
                     "</td>";
                 echo "<td onclick='openEditModal(" . json_encode($row) . ")'>" . $row['configuration_name'] . "</td>";
                 echo "<td onclick='openEditModal(" . json_encode($row) . ")'>" . $row['release_date'] . "</td>";
-                echo "<td><button class='delete-button' onclick='deleteRecord(" . $row['id'] . ")'>Удалить</button></td>";
+                echo "<td><img src='../IMG/delete.svg' alt='delete' style='cursor: pointer;width:20px;' onclick='deleteRecord(" . $row['id'] . ")'></td>";
                 echo "</tr>";
             }
         } else {

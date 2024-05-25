@@ -89,7 +89,7 @@ $result = $conn->query($sqlGetEquipments);
             </a>
         </div>
         <div class="nav-item active">
-            <div class="rectangle-9" style="text-decoration: none;">
+            <div class="rectangle-9" style="text-decoration: none;padding:0 10px; 0 10px;">
                 <img src="../IMG/image30-active.svg" alt="Продукты" width="28" height="24"/>
                 <span class="nav-text active">Продукты</span>
             </div>
@@ -174,10 +174,11 @@ $result = $conn->query($sqlGetEquipments);
                     $name = htmlspecialchars($row['name'], ENT_QUOTES, 'UTF-8');
                     $description = htmlspecialchars($row['description'], ENT_QUOTES, 'UTF-8');
                     $idEquipment = htmlspecialchars($row['id'], ENT_QUOTES, 'UTF-8');
-                    echo "<tr class='table-row'>";
+                    echo "<tr class='table-row task-list-row'>";
                     echo "<td data-id='" . $row['id'] . "' data-name='" . htmlspecialchars($row['name']) . "' data-description='" . htmlspecialchars($row['description']) . "' onclick='openEdit(this)'>" . $name . "</td>";
                     echo "<td data-id='" . $row['id'] . "' data-name='" . htmlspecialchars($row['name']) . "' data-description='" . htmlspecialchars($row['description']) . "' onclick='openEdit(this)'>" . $description . "</td>";
-                    echo "<td><button class='delete-button' onclick='deleteRecord(" . $idEquipment . ")'>Удалить</button></td>";
+                    //echo "<td><button class='delete-button' onclick='deleteRecord(" . $idEquipment . ")'>Удалить</button></td>";
+                    echo "<td><img src='../IMG/delete.svg' alt='delete' style='cursor: pointer;width:20px;' onclick='deleteRecord(" . $idEquipment . ")'></td>";
                     echo "</tr>";
                 }
             } else {

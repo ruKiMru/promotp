@@ -10,11 +10,12 @@ $company_name = $_POST['company_name'];
 $contact_phone = $_POST['contact_phone'];
 $email = $_POST['c_email']; // Изменили имя переменной
 $inn = $_POST['c_inn']; // Изменили имя переменной
+$tg = $_POST['c_tg'];
 
 
 // Подготовка SQL-запроса для добавления клиента
-$sql = "INSERT INTO clients (first_name, middle_name, last_name, company_name, contact_phone, email, inn) 
-        VALUES ('$first_name', '$middle_name', '$last_name', '$company_name', '$contact_phone', '$email', '$inn')";
+$sql = "INSERT INTO clients (first_name, middle_name, last_name, company_name, contact_phone, email, inn, username) 
+        VALUES ('$first_name', '$middle_name', '$last_name', '$company_name', '$contact_phone', '$email', '$inn', '$tg')";
 
 if ($conn->query($sql) === TRUE) {
     // В случае успешного добавления клиента отправляем сообщение об успехе

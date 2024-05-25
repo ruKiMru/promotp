@@ -240,7 +240,14 @@ body {
     width: 100%;
     border-collapse: collapse;
   }
-  
+
+  .task-list-row:hover{
+    background: #E6E6E6;
+  }
+  .task-list-row{
+    cursor: pointer;
+  }
+
   .task-table th, .task-table td {
     border: 1px solid #E6E6E6;
     padding: 8px;
