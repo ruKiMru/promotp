@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link rel="stylesheet" href="../CSS/chatsStyle.css">
+    <title>Администратор: Чаты</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="nav-item">
+                <a href="Tasks.html" class="rectangle-9 tasks" style="text-decoration: none;">
+                    <img src="../IMG/image-70.svg" alt="Задачи" width="30" height="30" />
+                    <span class="nav-text">Задачи</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="Clients.html" class="rectangle-9 client" style="text-decoration: none;">
+                    <img src="../IMG/image-80.svg" alt="Клиенты" width="21" height="21" />
+                    <span class="nav-text">Клиенты</span>
+                </a>
+            </div>
+            <div class="nav-item active">
+                <div class="rectangle-9 chat">
+                    <img src="../IMG/image-90active.svg" alt="Чаты" width="28" height="24" />
+                    <span class="nav-text">Чаты</span>
+                </div>
+            </div>
+        </div>
+        <div class="login-avatar-container">
+            <div class="login-text">Логин</div>
+            <div class="avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <circle cx="13" cy="13" r="13" fill="#C7A5A5" />
+                </svg>
+            </div>
+        </div>
+    </header>
+    <div class="header-content">
+        <div class="search-panel">
+            <img src="../IMG/Search.svg" alt="Search" />
+            <input type="text" />
+        </div>
+        <div class="add-button"><span>Добавить</span></div>
+    </div>
+    <div class="chats-container">
+      <div class="contacts-panel">
+          <div class="contacts-title">Контакты</div>
+          <div class="contacts-line"></div>
+          <div class="contacts-list">
+              <a href="#" class="contact">
+                  <div class="avatar">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                          <circle cx="19" cy="19" r="19" fill="#D9D9D9"/>
+                      </svg>
+                  </div>
+                  <div class="contact-info">
+                      <span class="contact-name">Семенов ИП</span>
+                  </div>
+              </a>
+              <!-- Добавленные контакты -->
+              <a href="#" class="contact">
+                  <div class="avatar">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                          <circle cx="19" cy="19" r="19" fill="#B59A9A"/>
+                      </svg>
+                  </div>
+                  <div class="contact-info">
+                      <span class="contact-name">Иванова Анна</span>
+                  </div>
+              </a>
+              <a href="#" class="contact">
+                  <div class="avatar">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                          <circle cx="19" cy="19" r="19" fill="#C7A5A5"/>
+                      </svg>
+                  </div>
+                  <div class="contact-info">
+                      <span class="contact-name">Петров Николай</span>
+                  </div>
+              </a>
+              <!-- Добавленные контакты -->
+          </div>
+      </div>
+      <div class="chat-panel">
+        <div class="chat-window">
+            <div class="message outgoing">
+                <div class="avatar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                        <circle cx="19" cy="19" r="19" fill="#C7A5A5"/>
+                    </svg>
+                </div>
+                <div class="message-content">
+                    <p>Привет!</p>
+                </div>
+            </div>
+            <div class="message incoming">
+                <div class="avatar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                        <circle cx="19" cy="19" r="19" fill="#D9D9D9"/>
+                    </svg>
+                </div>
+                <div class="message-content">
+                    <p>Привет! Как дела?</p>
+                </div>
+            </div>
+            <div class="message outgoing">
+                <div class="avatar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                        <circle cx="19" cy="19" r="19" fill="#C7A5A5"/>
+                    </svg>
+                </div>
+                <div class="message-content">
+                    <p>Отлично, спасибо! А у тебя?</p>
+                </div>
+            </div>
+            <div class="message incoming">
+                <div class="avatar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                        <circle cx="19" cy="19" r="19" fill="#D9D9D9"/>
+                    </svg>
+                </div>
+                <div class="message-content">
+                    <p>Тоже хорошо! Планируешь что-то интересное на выходных?</p>
+                </div>
+            </div>
+        </div>
+        <div class="message-input">
+          <input type="text" id="messageInput" placeholder="Введите сообщение" />
+          <div class="emoji-button" onclick="toggleEmojiPopup()">
+              <img src="../IMG/Smile.svg" alt="Smile" />
+              <div class="emoji-popup">
+                  <!-- Здесь вы можете разместить ваши смайлики -->
+                  <span class="emoji" onclick="insertEmoji('😊')">😊</span>
+                  <span class="emoji" onclick="insertEmoji('😂')">😂</span>
+                  <span class="emoji" onclick="insertEmoji('❤️')">❤️</span>
+                  <!-- ... -->
+              </div>
+          </div>
+          <div class="send-button">
+              <img src="../IMG/Send.svg" alt="Send" />
+          </div>
+      </div>    
+  <script>
+    function toggleEmojiPopup() {
+    const emojiPopup = document.querySelector('.emoji-popup');
+    emojiPopup.style.display = (emojiPopup.style.display === 'none' || emojiPopup.style.display === '') ? 'block' : 'none';
+}
+function insertEmoji(emoji) {
+    const messageInput = document.getElementById('messageInput');
+    const cursorPos = messageInput.selectionStart;
+    const textBefore = messageInput.value.substring(0, cursorPos);
+    const textAfter = messageInput.value.substring(cursorPos);
+    messageInput.value = textBefore + emoji + textAfter;
+}
+
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var loginContainer = document.querySelector('.login-avatar-container');
+        var loginText = loginContainer.querySelector('.login-text');
+        
+        // Получаем значение куки с логином пользователя
+        var loginCookie = document.cookie.replace(/(?:(?:^|.*;\s*)login\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    
+        // Проверяем, есть ли значение куки с логином
+        if (loginCookie) {
+            loginText.textContent = loginCookie; // Отображаем логин пользователя
+        }
+    });
+    </script>
+</body>
+</html>

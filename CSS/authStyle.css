@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter';
+  font-size: 8px;
+  font-family: Inter;
+  font-weight: 700;
+  word-wrap: break-word
+}
+
+html, body {
+  height: 100%;
+ 
+}
+
+body {
+
+  font-family: Inter;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-image: url('../IMG/background.png'); 
+  background-size: 100% 100%; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  overflow: hidden; 
+}
+.content {
+  width: 412px;
+  height: 235px;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.93); 
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  scale: 150%;
+}
+
+.user-image {
+  margin-bottom: 50px;
+  width: 108px;
+  height: 108px;
+  background-image: url('../IMG/user.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.field input[name="login"],
+.field input[name="password"] {
+  
+  background: #ffffff;
+  border-radius: 0 5px 5px 0; 
+  border: 1px solid #cdcdcd;
+  width: 160px; 
+  height: 27px;
+  padding: 5px 5px 5px 30px; 
+  box-sizing: border-box;
+  position: relative;
+ 
+}
+
+.enter-button {
+  background: #5fc3d0;
+  border-radius: 7px;
+  border-style: solid;
+  border-color: #88aeb2;
+  border-width: 1px;
+  width: 181px;
+  height: 25.71px;
+  position: relative;
+  color: white; 
+  margin-top: 21.24px; 
+  left: -22px; 
+
+}
+
+.field {
+  position: relative;
+  display: flex;
+  align-items: center; 
+  width: 183px; 
+
+}
+
+input[type="checkbox"] {
+  transform: scale(0.7); 
+  
+}
+.remember-container {
+  position: absolute;
+  top: 126px; 
+  width: 183.11px; 
+  display: flex; 
+  align-items: center; 
+  left: 180px; 
+  
+}
+
+.login-input,
+.password-input {
+  margin-bottom: 24.69px;
+  width: 183.11px;
+}
+
+.field.login-field {
+  position: relative;
+}
+.show-password-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 2px;
+  top: 29%;
+  transform: translateY(-50%);
+}
+
+.show-password-button img {
+  width: 16px;
+  height: 16px;
+}
+
+
+.iconLog img {
+  background-color: #D9D9D9;
+  border: 1px solid #cdcdcd; 
+  padding: 7.5px; 
+  border-radius: 5px 0px 0px 5px;
+  left: -21px;
+  position: absolute; 
+  top: 0%; 
+  transform: translateY(-0%); 
+}
+
+.iconPass img {
+  background-color: #D9D9D9;
+  border: 1px solid #cdcdcd; 
+  padding: 7px; 
+  border-radius: 5px 0px 0px 5px;
+  left: -20px;
+  position: absolute; 
+  top: 0%; 
+  transform: translateY(-0%); 
+}
+.remember-checkbox {
+  filter: grayscale(100%); 
+
+}
+
+.remember-label
+{
+  color: #9D9D9D;;
+}
+.field input::placeholder {
+  color: #CDCDCD;
+}
+.error-message {
+  color: red;
+  position: absolute;
+  bottom: 17px;
+  left: 65%;
+  transform: translateX(-50%);
+}
+

@@ -1,0 +1,85 @@
+/* Общие стили для календаря */
+.calendar {
+    font-family: 'Inter', sans-serif;
+    max-width: 1400px; /* Увеличение максимальной ширины календаря */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: auto; /* Добавляем полосы прокрутки, если контент выходит за границы */
+}
+
+.month-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.month-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden; /* Обрезаем контент, который выходит за границы */
+}
+
+.day:nth-child(7n + 1) {
+    color: #f00;
+}
+
+.day:nth-child(7n + 7) {
+    color: #00f;
+}
+
+/* Обновленные стили для дней с задачами */
+.day.task-day {
+    width: 200px;
+    border: 2px solid #007bff; /* Широкая рамка для дня с задачами */
+    padding: 8px; /* Дополнительный отступ, чтобы рамка была более заметной */
+}
+
+/* Обновленные стили для задач */
+.task {
+    padding: 5px;
+    background-color: #dff0d8;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    margin-top: 5px;
+    word-wrap: break-word;
+}
+
+
+/* Стили для кнопок */
+button {
+    padding: 8px 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    background-color: #5FC3D0;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,159 @@
+body {
+    
+    margin: 0;
+    padding: 0;
+    color: #898989;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    line-height: normal;
+}
+#TaskAddIssueWindow.modalIssue {
+    display: none; /* Initially hide the modalIssue */
+}
+
+#editModal.modalIssue {
+    display: none;
+}
+
+.container_c {
+    width: 357px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.content_c {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.logo_c {
+    width: 98px;
+    height: 98px;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.chat-info_c {
+    padding-top: 45px;
+    margin-left: 20px;
+    position: absolute;
+    left: 160px;
+}
+
+.icons_c {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: scale(150%);
+}
+
+.cross-icon-third_c,
+.pencil-icon_c {
+    margin-top: 10px;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.user-icon_c {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.header_c {
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.contact-info_c {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.input-group_c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 9px;
+}
+
+.input-group_c label {
+    width: 100px;
+}
+
+.input-group_c input {
+    width: 187px;
+    height: 22px;
+    flex-shrink: 0;
+    padding: 9px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #898989;
+}
+
+.input-group_c select {
+    width: 206px;
+    height: 40px;
+    flex-shrink: 0;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #898989;
+    appearance: none;
+}
+
+.input-group_c select:hover {
+    border-color: #aaa;
+}
+
+.input-group_c select:focus {
+    border-color: #5FC3D0;
+    outline: none;
+}
+
+.save-button_c {
+    width: 153px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #5FC3D0;
+    color: #FFF;
+    margin-top: 40px;
+    margin-left: 100px;
+    cursor: pointer;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+    outline: none;
+}
+
+.save-button_c:hover {
+    background: #4BAAB3;
+}
+
+.input-group_c textarea {
+    width: 100%;
+    height: 60px;
+    flex-shrink: 0;
+    padding: 9px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #898989;
+    resize: vertical;
+}

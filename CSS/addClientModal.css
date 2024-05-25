@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #898989;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .container {
+    width: 357px;
+    height: 480px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align items to the left */
+
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 98px;
+    height: 98px;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+  
+  .chat-info {
+    padding-top: 45px;
+    margin-left: 20px;
+    position: absolute;
+    left: 160px;
+  }
+  
+  .chat-icon {
+    position: absolute;
+    left: -30px;
+    scale: 110%;
+  }
+  
+  .header {
+    font-size: 20px;
+    margin-left: 15px; /* Add margin to the left */
+  }
+  
+  .contact-info {
+    width: 100%;
+    margin-top: 15px; /* Increase the margin-top for additional spacing */
+  }
+  
+  .input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 9px; /* Space between input groups */
+    
+  }
+  
+  .input-group label {
+    width: 100px;
+  }
+  
+  .input-group input {
+    width: 187px;
+    height: 32px;
+    flex-shrink: 0;
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: scale(150%);
+  }
+  
+  .pencil-icon,
+  .cross-icon {
+    margin-top: 10px;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .user-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  .input-group input {
+    width: 187px;
+    height: 22px;
+    flex-shrink: 0;
+    padding: 9px;
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Add this line to make the input fields rounded */
+    color: #898989; /* Add this line to set the text color in the input fields */
+  }
+  .save-button {
+    width: 153px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #5FC3D0;
+    color: #FFF;
+    margin-top: 20px;    
+    margin-left: 100px;
+    cursor: pointer;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+  }
+  
+  .save-button:hover {
+    background: #4BAAB3; /* Change color on hover if desired */
+  }
+  
+  
+  
+  

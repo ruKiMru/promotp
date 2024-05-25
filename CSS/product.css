@@ -1,0 +1,321 @@
+body {
+    margin: 0;
+    font-family: Inter;
+    overflow: hidden;
+    background-color: #F2F0F0;
+}
+header {
+    width: 100%;
+    height: 35px;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+#statusFilter {
+    display: none;
+}
+
+.header-container {
+    display: flex;
+}
+
+.nav-item {
+    flex-shrink: 0;
+    position: relative;
+}
+
+.rectangle-9::after {
+    content: "";
+    width: 1px;
+    height: 35px;
+    background: #CFCFCF;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.rectangle-9 {
+    background: #d9d9d9;
+    width: 93.21px;
+    height: 35px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.rectangle-9 img {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+.rectangle-9.client img {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.rectangle-9.chat img {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.nav-text {
+    width: 39.244px;
+    height: 9.479px;
+    flex-shrink: 0;
+    color: #5FC3D0;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.client .nav-text {
+    width: 46.112px;
+    height: 9px;
+    color: #FFF;
+}
+
+.chat .nav-text {
+    width: 29.433px;
+    height: 10px;
+    color: #FFF;
+}
+
+.active .rectangle-9 {
+    background-color: #F2F0F0;
+}
+
+.chat .rectangle-9 {
+    z-index: 1;
+}
+
+.chat .rectangle-9::after {
+    content: "";
+    width: 1px;
+    height: 35px;
+    background: #CFCFCF;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.login-avatar-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Добавлен отступ справа */
+}
+
+.login-text {
+    margin-right: 5px;
+    width: 34px;
+    height: 12px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.header-content {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    padding: 0 10px;
+}
+
+.second-panel {
+    display: flex;
+    width: 276px;
+    height: 25px;
+    flex-shrink: 0;
+    background-color: #F2F0F0;
+    margin-right: 208px;
+}
+
+.panel-item {
+    width: 120px;
+    height: 25px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.panel-item.active {
+    background-color: #B3B3B3;
+    border-radius: 30px 0 0 30px;
+}
+
+.panel-item > a {
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #878787;
+}
+
+.panel-item.active > div {
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #FFFFFF;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.search-panel {
+    margin-right: 187px;
+    width: 272px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    overflow: hidden; /* Добавлено для скрытия части input, выходящего за границы */
+}
+
+.search-panel img {
+    margin-left: 3px; /* Уменьшен отступ для изображений */
+    margin-right: 3px; /* Уменьшен отступ для изображений */
+}
+
+.divider {
+    width: 1px;
+    height: 14px;
+    background: #E6E6E6;
+    margin-left: 6px; /* Отступ между Polygon2 и divider */
+    margin-right: 6px; /* Отступ между divider и Search */
+}
+
+.search-panel input {
+    border: none;
+    outline: none;
+    width: calc(100% - 22px); /* Уменьшен ширины поля ввода, чтобы учесть изображения и отступы */
+    height: 25px;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.add-button {
+    margin-left: auto; /* Помещаем кнопку в конец родительского контейнера */
+    margin-right: 10px; /* Отступ справа для разделения от других элементов */
+    width: 153px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #5FC3D0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-button span {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.task-list-container {
+    width: calc(100% - 20px);
+    height: calc(100vh - 94px);
+    background: #FFF;
+    margin-top: 15px;
+    padding: 10px;
+    overflow: auto;
+}
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.task-table th, .task-table td {
+    border: 1px solid #E6E6E6;
+    padding: 8px;
+    text-align: left;
+}
+
+.task-table th {
+    background-color: #F2F0F0;
+    color: #000;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.text-area-group_c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 9px;
+}
+
+.text-area-group_c textarea {
+    width: 70%;
+    height: 156px;
+    padding: 9px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #898989;
+    resize: none;
+}
+
+.select-multiple-group_c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 9px;
+}
+
+.select-multiple-group_c select {
+    width: 206px;
+    height: 120px;
+    flex-shrink: 0;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #898989;
+    appearance: none;
+}
+
+.select-multiple-group_c select:hover {
+    border-color: #aaa;
+}
+
+.select-multiple-group_c select:focus {
+    border-color: #5FC3D0;
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+

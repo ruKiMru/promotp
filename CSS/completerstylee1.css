@@ -1,0 +1,277 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #898989;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.container {
+    width: 953px;
+    height: 542px;
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.logo {
+    scale: 65%;
+    width: 98px;
+    height: 98px;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.chat-info {
+    padding-top: 45px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.chat-icon {
+    position: absolute;
+    left: -190px;
+    top: 90px;
+    scale: 110%;
+}
+
+.header {
+    position: absolute;
+    top: 84px;
+    left: -173px;
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+.contact-info {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.contact-info td {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.contact-info label {
+    display: inline-block;
+    width: 150px;
+    color: #898989;
+    font-size: 12px;
+}
+
+.contact-info span {
+    display: inline-block;
+    color: #898989;
+    font-size: 12px;
+}
+
+.icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: scale(150%);
+}
+
+
+.cross-icon {
+    margin-top: 10px;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.contact-info-wrapper {
+    position: absolute;
+    width: 34%;
+    top: 120px;
+    left: 0px;
+}
+.divider-second {
+    position: absolute;
+    width: 1px;
+    height: 562px;
+    right: 655px;
+    background-color: #C1C1C1;
+}
+.email-editor {
+    position: absolute;
+    top: 250px;
+    right: 0;
+    width: 539px; /* Установлено фиксированное значение */
+    height: 176px; /* Установлено фиксированное значение */
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Ваш внутренний отступ */
+    margin-right: 35px;
+}
+
+.email-text {
+    padding: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 400px;
+    /*resize: none; /* Запрещаем изменение размера */
+}
+
+.editor-buttons {
+    margin-bottom: 10px;
+}
+
+.editor-button {
+    margin-right: 5px;
+    /* Добавьте стили для кнопок редактора по вашему усмотрению */
+}
+
+.send-button {
+
+    width: 109px;
+    height: 24px;
+    background-color: #ECE7E7;
+    color: #969696;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Добавьте стили для кнопки отправки по вашему усмотрению */
+}
+.company-info {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-left: -10px;
+
+  }
+  
+  .company-info h3 {
+    font-size: 12px;
+    color: black;
+   
+  }
+  
+  .company-info p {
+    font-size: 12px;
+    color: #898989;
+    margin-top: -5px;
+  }
+  .pencil-icon
+  {
+    position: relative;
+    left: -1px;
+    top: -1px;
+  }
+  .Tasks
+  {
+    position: absolute;
+    right: 550px;
+  }
+.cross-icon-sec
+{
+    position: absolute;
+    left: 290px;
+    scale: 70%;
+    top: 15px;
+}
+.Description {
+    position: absolute;
+    left: 375px;
+    margin-left: -20px;
+    top: 50px;
+}
+
+.Description-text {
+    position: absolute;
+    left: 375px;
+    top: 80px;
+    width: 550px;
+    height: 100px;
+    display:none;
+
+}
+
+.History
+{
+    position: absolute;
+    top: 380px;
+    left: 100px;
+    
+}
+.taskNameOutput
+{
+    position: absolute;
+    left: 375px;
+}
+.CommentsHistory
+{
+    position: absolute;
+    top: 450px;
+    left: 10px;
+    
+}
+.EditorMarks
+{
+    position: absolute;
+    top: 230px;
+    left: 280px;
+    font-size: 11px;
+    cursor: pointer; /* Изменение курсора на пальчик */
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 185px;
+    top: 232px; /* Изменено для лучшей видимости */
+}
+
+.dropdown-content select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #333;  
+}
+
+.EditorMarks:hover {
+    text-decoration: underline;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+
+

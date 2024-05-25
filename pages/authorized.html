@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"/>
+    <link rel="stylesheet" href="../CSS/authorized.css">
+    <title id="page-title">Authorized Page</title>
+</head>
+<body>
+    <h1 id="welcome-message">Добро пожаловать, User!</h1>
+    <p>Вы успешно авторизованы.</p>
+    <script>
+        // Проверяем, установлен ли куки "login" и обновляем приветственное сообщение и заголовок страницы
+        if (document.cookie.indexOf('login') !== -1) {
+            var login = document.cookie.split('; ').find(row => row.startsWith('login')).split('=')[1];
+            document.getElementById('welcome-message').innerText = 'Добро пожаловать, ' + login + '!';
+            document.getElementById('page-title').innerText = 'Authorized Page - ' + login;
+        }
+    </script>
+</body>
+</html>

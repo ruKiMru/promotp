@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link rel="stylesheet" href="../CSS/tasksStyle.css">
+    <title>Задачи</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="nav-item active">
+                <div class="rectangle-9">
+                    <img src="../IMG/image-70active.svg" alt="Задачи" width="30" height="30" />
+                    <span class="nav-text">Задачи</span>
+                </div>
+            </div>
+            <div class="nav-item">
+              <a href="Clients.html" class="rectangle-9 client" style="text-decoration: none;">
+                    <img src="../IMG/image-80.svg" alt="Клиенты" width="21" height="21" />
+                    <span class="nav-text">Клиенты</span>
+              </a>
+            </div>
+            <div class="nav-item">
+              <a href="Chats.html" class="rectangle-9 chat" style="text-decoration: none;">
+                    <img src="../IMG/image-90.svg" alt="Чаты" width="28" height="24" />
+                    <span class="nav-text">Чаты</span>
+              </a>
+            </div>
+        </div>
+        <div class="login-avatar-container">
+            <div class="login-text">Логин</div>
+            <div class="avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <circle cx="13" cy="13" r="13" fill="#C7A5A5" />
+                </svg>
+            </div>
+        </div>
+    </header>
+    <div class="header-content">
+        <div class="second-panel">
+            <div class="panel-item">
+                <span>Список</span>
+            </div>
+            <div class="panel-item">
+                <span>Канбан</span>
+            </div>
+            <div class="panel-item">
+                <span>Календарь</span>
+            </div>
+            <div class="panel-item">
+                <span>Гант</span>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="search-panel">
+            <img src="../IMG/Polygon2.svg" alt="Polygon2" />
+            <div class="divider"></div>
+            <img src="../IMG/Search.svg" alt="Search" />
+            <input type="text"/>
+          </div>
+          <div class="add-button"><span>Добавить</span></div>
+    </div>
+    <div class="task-list-container">
+        <table class="task-table">
+          <thead>
+            <tr>
+              <th>Имя задачи</th>
+              <th>Статус</th>
+              <th>Клиент</th>
+              <th>Метки</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Пустые строки задач -->
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var loginContainer = document.querySelector('.login-avatar-container');
+      var loginText = loginContainer.querySelector('.login-text');
+      
+      // Получаем значение куки с логином пользователя
+      var loginCookie = document.cookie.replace(/(?:(?:^|.*;\s*)login\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+  
+      // Проверяем, есть ли значение куки с логином
+      if (loginCookie) {
+          loginText.textContent = loginCookie; // Отображаем логин пользователя
+      }
+  });
+  </script>
+  
+</html>

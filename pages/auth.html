@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../CSS/authStyle.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"/>
+</head>
+<body>
+    <div class="content">
+      <div class="user-image"></div>
+      <form action="../login.php" method="post">
+        <div class="input-container">
+          <div class="field login-field">
+            <div class="iconLog">
+              <img src="../IMG/user.svg" alt="User Icon">
+            </div>
+            <input type="text" name="login" placeholder="Логин" class="login-input">
+          </div>
+          <div class="field password-field">
+            <div class="iconPass">
+                <img src="../IMG/pass.svg" alt="User Icon">
+            </div>
+            <input type="password" name="password"  placeholder="Пароль" class="password-input">
+            <button type="button" class="show-password-button" onclick="togglePasswordVisibility()">
+                <img src="../IMG/eye.svg" alt="Показать пароль">
+            </button>
+        </div>
+              <div class="field remember-container">
+                <input type="checkbox" id="remember" name="rememberme" class="remember-checkbox">
+                <label for="remember" class="remember-label">Запомнить меня</label>
+              </div>
+          <button type="submit" class="enter-button">Войти</button>
+        </div>
+      </form>
+    </div>
+  </body>
+<script src="../JS/erorrMess.js"></script>
+<script src="../JS/script.js"></script>
+<script src="../JS/showPass.js"></script>
+
+</html>

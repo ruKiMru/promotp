@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Исключения для прямого доступа к HTML-файлам
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule \.html$ - [L]
+
+    # Если запрос не является директорией и не существует как файл
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+    # Перенаправляем на admin.php, если запрос содержит admin/key
+    RewriteRule ^admin/([^/]*)$ admin.php?key=$1 [QSA,L]
+
+    # Если запрос не является директорией и не существует как файл
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+    # Перенаправляем на index.php только если это не .html файл
+    RewriteCond %{REQUEST_URI} !\.html$
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>

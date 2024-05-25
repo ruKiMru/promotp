@@ -1,0 +1,471 @@
+body {
+    margin: 0;
+    font-family: Inter;
+    overflow: hidden;
+    background-color: #F2F0F0;
+  }
+  header {
+    width: 100%;
+    height: 35px;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  .header-container {
+    display: flex;
+  }
+  
+  .nav-item {
+    flex-shrink: 0;
+    position: relative;
+  }
+  .tasks .rectangle-9 {
+    width: 93.206px;
+    height: 35px;
+    flex-shrink: 0;
+    background: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative; /* Добавлено */
+}
+
+.tasks .nav-text {
+    width: 39.244px;
+    height: 9.479px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative; /* Добавлено */
+    z-index: 1; /* Добавлено */
+}
+
+  
+.client .rectangle-9 {
+    width: 93.206px;
+    height: 35px;
+    flex-shrink: 0;
+    background: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative; /* Добавлено */
+}
+
+.client .nav-text {
+    width: 39.244px;
+    height: 9.479px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative; /* Добавлено */
+    z-index: 1; /* Добавлено */
+}
+.active .rectangle-9 {
+  background-color: #F2F0F0;
+}
+  
+  .rectangle-9::after {
+    content: "";
+    width: 1px;
+    height: 35px;
+    background: #CFCFCF;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .rectangle-9 {
+    width: 93.21px;
+    height: 35px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .rectangle-9 img {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+  
+  .rectangle-9.client img {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  
+  .rectangle-9.chat img {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  
+  .chat .rectangle-9 {
+    width: 93.206px;
+  height: 35px;
+  flex-shrink: 0;
+  background: #F2F0F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative; /* Добавлено */
+}
+
+.chat .nav-text {
+    width: 46.112px;
+  height: 9px;
+  flex-shrink: 0;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: relative; /* Добавлено */
+  z-index: 1; /* Добавлено */
+}
+  
+.login-avatar-container {
+  display: flex;
+  align-items: center;
+  margin-right: 0px; /* Добавлен отступ справа */
+}
+.avatar {
+margin-top: 16px;
+}
+.login-text {
+  margin-right: 5px;
+  width: 34px;
+  height: 12px;
+  flex-shrink: 0;
+  color: #FFF;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+  .header-content {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    padding: 0 10px;
+  }
+ 
+  .spacer {
+    flex-grow: 1;
+  }
+  
+  .search-panel {
+    width: 240px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    overflow: hidden; /* Добавлено для скрытия части input, выходящего за границы */
+  }
+  
+  .search-panel img {
+    margin-left: 3px; /* Уменьшен отступ для изображений */
+    margin-right: 3px; /* Уменьшен отступ для изображений */
+  }
+  
+  .divider {
+    width: 1px;
+    height: 14px;
+    background: #E6E6E6;
+    margin-left: 6px; /* Отступ между Polygon2 и divider */
+    margin-right: 6px; /* Отступ между divider и Search */
+  }
+  
+  .search-panel input {
+    border: none;
+    outline: none;
+    width: calc(100% - 22px); /* Уменьшен ширины поля ввода, чтобы учесть изображения и отступы */
+    height: 25px;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .add-button {
+    margin-left: auto; /* Помещаем кнопку в конец родительского контейнера */
+    margin-right: 10px; /* Отступ справа для разделения от других элементов */
+    width: 153px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #5FC3D0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .add-button span {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .chats-container {
+    display: flex;
+    height: calc(100vh - 94px);
+}
+
+.contacts-panel {
+    position: relative;
+    width: 281.504px;
+    flex-shrink: 0;
+    background: #FFF;
+    margin-left: 5px;
+    margin-top: 14px;
+}
+
+.contacts-title {
+    color: #000;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 8px; /* Отступ слева */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.contacts-line {
+    width: 281.504px;
+    height: 0;
+    flex-shrink: 0;
+    border-top: 1px solid #F2F0F0; /* Линия внутри панели контактов */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+
+.contact {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #F2F0F0;
+    text-decoration: none; /* Убираем стилизацию ссылок */
+    color: #000; /* Цвет текста контакта */
+}
+
+.active-contact {
+  background-color: #f0f0f0; /* Измените цвет фона для активного состояния */
+  color: #000; /* Измените цвет текста для активного состояния */
+  /* Добавьте любые другие стили для активного состояния */
+}
+
+.avatar {
+    margin-bottom: 8.5px;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    fill: #D9D9D9;
+    margin-right: 8px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-name {
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.contacts-panel::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 5px;
+    background: transparent;
+}
+
+.chat-panel {
+  position: relative;
+  width: calc(100% - 281.504px - 14px - 7px);
+  flex-shrink: 0;
+  background: #FFF;
+  margin-left: 7px;
+  margin-top: 14px;
+  overflow-y: auto;
+}
+.chat-panel::-webkit-scrollbar {
+  width: 8px; /* Ширина полосы прокрутки */
+}
+
+.chat-panel::-webkit-scrollbar-thumb {
+  height: 242px;
+  border-radius: 8px;
+  background: #D9D9D9;
+}
+
+.chat-panel::-webkit-scrollbar-track {
+  margin-right: 2px; /* Отступ справа */
+}
+
+.chat-window {
+  padding: 10px;
+  margin-bottom: 100%; /* Отступ снизу для ввода сообщения */
+}
+
+.message {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  fill: #D9D9D9;
+  margin-right: 8px;
+}
+
+.message-content {
+  background-color: #F2F0F0;
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 70%; /* Максимальная ширина сообщения */
+}
+
+.incoming .message-content {
+  margin-left: 8px; /* Добавляем отступ при входящем сообщении */
+}
+.outgoing .message-content {
+  margin-left: 8px; /* Добавляем отступ при входящем сообщении */
+}
+
+.message-input-hidden {
+  display: none;
+}
+
+.message-input {
+  padding: 10px;
+  border-top: 1px solid #F2F0F0;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+  width: calc(100% - 20px);
+  background-color: #FFF;
+  z-index: 1; /* Чтобы .message-input оставался поверх .chat-window */
+}
+
+input {
+  flex: 1; /* Занимает всю доступную ширину */
+  height: 41px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+.emoji-button,
+.send-button {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.send-button img {
+  width: 34px; /* Размер картинки Send */
+  height: 19px;
+}
+
+img {
+  width: 24px;
+  height: 24px;
+}
+.emoji-popup {
+  display: none;
+  position: absolute;
+  bottom: 60px;
+  right: 9px;
+  background: #FFF;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.emoji-button {
+  cursor: pointer;
+}
+
+.emoji {
+  cursor: pointer;
+  margin: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
