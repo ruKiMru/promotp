@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
               </a>
             </div>
             <div class="nav-item">
-              <a href="Chats.php" class="rectangle-9 chat" style="text-decoration: none;">
+              <a href="https://promotp.ru/Chats.php" class="rectangle-9 chat" style="text-decoration: none;">
                     <img src="IMG/image-90.svg" alt="Чаты" width="28" height="24" />
                     <span class="nav-text">Чаты</span>
               </a>

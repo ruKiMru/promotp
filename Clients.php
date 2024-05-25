@@ -91,7 +91,7 @@ $result = $conn->query($sql);
             <div class="content">
                 <img class="logo" src="IMG/image-wind-user.svg" alt="Logo">
                 <div class="chat-info">
-                    <img class="chat-icon" onclick="window.location.href='/chats.php'" src="IMG/image-chat.svg" alt="Chat Icon">
+                    <img class="chat-icon" onclick="window.location.href='https://promotp.ru/Chats.php'" src="IMG/image-chat.svg" alt="Chat Icon">
                     <div class="header">Открыть чат</div>
                 </div>
             </div>
@@ -145,7 +145,7 @@ $result = $conn->query($sql);
             </div>
         </div>
         <div class="nav-item">
-            <a href="Chats.php" class="rectangle-9 chat" style="text-decoration: none;">
+            <a href="https://promotp.ru/Chats.php" class="rectangle-9 chat" style="text-decoration: none;">
                 <img src="IMG/image-90.svg" alt="Чаты" width="28" height="24"/>
                 <span class="nav-text">Чаты</span>
             </a>
@@ -196,7 +196,7 @@ $result = $conn->query($sql);
                 echo "<td onclick=(parentNode.firstElementChild.firstElementChild.click())> <span style='cursor: pointer;' onclick='openModal(" . $row['id_client'] . ")'>" . $row["first_name"] . " " . $row["middle_name"] . " " . $row["last_name"] . "</span></td>";
                 echo "<td onclick=(parentNode.firstElementChild.firstElementChild.click())>" . $row["task_name"] . "</td>";
                 echo "<td onclick=(parentNode.firstElementChild.firstElementChild.click())>" . $row["status_name"] . "</td>";
-                echo "<td onclick='(window.location.href = \"/chats.php\")'\"><img src='IMG/chat.svg' alt='chat' /> Открыть чат</td>";
+                echo "<td onclick='(window.location.href = \"https://promotp.ru/Chats.php\")'\"><img src='IMG/chat.svg' alt='chat' /> Открыть чат</td>";
                 echo "<td><img src='IMG/delete.svg' alt='delete' style='cursor: pointer;width:20px;' onclick='deleteClient(" . $row['id_client'] . ")'></td>";
                 echo "</tr>";
             }
